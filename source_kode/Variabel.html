@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Penggunaan Variabel & Operator Javascript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e8f1ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            width: 350px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #005663;
+        }
+        
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        
+        button:hover {
+            background: #005663;
+        }
+        
+        #hasil {
+            margin-top: 15px;
+            font-size: 16px;
+            background: #f0f9ff;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Hitung Total Belanja</h2>
+        <label>Nama Pembeli:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama Anda">
+        <label>Harga Barang (Rp):</label>
+        <input type="number" id="harga" placeholder="Masukkan harga barang">
+        <label>Jumlah Barang: </label>
+        <input type="number" id="jumlah" placeholder="Masukkan jumlah">
+        <button onclick="hitungTotal()">Hitung</button>
+        <div id="hasil"></div>
+    </div>
+
+    <script>
+        function hitungTotal() {
+            let namaPembeli = document.getElementById("nama").value;
+            let hargaBarang = Number(document.getElementById("harga").value);
+            let jumlahBarang = Number(document.getElementById("jumlah").value);
+            let total = hargaBarang * jumlahBarang;
+            document.getElementById("hasil").innerHTML =
+
+                `<p > Halo <strong> ${namaPembeli} </strong>!<br>
+            Total belanja Anda adalah: <strong> Rp ${total.toLocaleString()} </strong></p >`;
+        }
+    </script>
+</body>
+
+</html>

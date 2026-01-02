@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>===============</title>
+    <link rel="stylesheet" href="./css/Stylist.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="sticky-header" id="header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="menu-btn" onclick="toggleSidebar()" aria-label="Toggle menu" title="Toggle menu">☰</div>
+                <div id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☾</div>
+            </div>
+
+            <div class="header-center">
+                <nav>
+                    <ul class="ul-nav">
+                        <li class="li-nav"><a href="Home.html">Home</a></li>
+                        <li class="li-nav"><a href="Profile.html">Profile</a></li>
+                        <li class="li-nav"><a href="Projects.html">Project</a></li>
+                        <li class="li-nav"><a href="Media.html">Media</a></li>
+                        <li class="li-nav"><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-right" id="signin-area"></div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar" aria-hidden="true">
+        <div class="sidebar-content">
+            <div class="profile-container">
+                <img src="./assets/img/PROFILE.jpg" alt="My Profile" />
+            </div>
+            <div class="info-media-wrapper">
+                <div class="Konten-sidebar">
+                    <h3>Informasi Tambahan</h3>
+                    <ul>
+                        <li>📅 Tanggal Update: <b>03 January 2026</b></li>
+                        <li>🌐 Status: <span id="login-status">Checking...</span></li>
+                        <li>⚡ Motto: "Kode adalah senjata, logika adalah tameng."</li>
+                        <li>💬 Pesan Dari Admin: Jangan berhenti di error pertama.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a href="Profile.html" class="bottom-link">About</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="container" role="main">
+            <!-- HERO SECTION -->
+            <div class="contact-hero">
+                <h1 class="contact-title">Mari Terhubung</h1>
+                <p class="contact-subtitle">Saya siap membantu mewujudkan proyek digital Anda. Hubungi saya melalui formulir atau informasi kontak di bawah ini.</p>
+            </div>
+
+            <!-- CONTACT GRID -->
+            <div class="contact-grid">
+                <!-- LEFT COLUMN - CONTACT INFO -->
+                <div>
+                    <div class="card">
+                        <h3>Informasi Kontak</h3>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>masterz007return@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+62 895-4122-82288</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Alamat</h4>
+                                <p>Jl. Semanan Raya, Semanan</p>
+                                <p>Kalideres, Jakarta Barat 11850</p>
+                                <p>DKI Jakarta - Indonesia</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-details">
+                                <h4>Jam Operasional</h4>
+                                <p>Sabtu: 17.00 - 00.00 WIB</p>
+                                <p>Minggu: 17.00 - 21.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>🌐 Ikuti Saya</h4>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/mz.faozan_779/" class="social-link" title="Instagram">
+                                <img src="./assets/img/IG.png" alt="Instagram">
+                            </a>
+                            <a href="https://web.facebook.com/profile.php?id=61576655205892" class="social-link" title="Facebook">
+                                <img src="./assets/img/FB.png" alt="Facebook">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN - CONTACT FORM -->
+                <div>
+                    <div class="card">
+                        <h3>Kirim Pesan</h3>
+
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nama Lengkap</label>
+                                <input type="text" id="name" class="form-control" placeholder="Masukkan nama lengkap Anda" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="alamat@email.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subjek</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Topik pesan Anda" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Pesan</label>
+                                <textarea id="message" class="form-control" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn">
+                                <span>Kirim Pesan</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAP SECTION -->
+            <div class="map-section">
+                <div class="map-header">
+                    <h3>📍 Lokasi Saya</h3>
+                    <p>Temukan saya di peta untuk kunjungan langsung</p>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.9246280976707!2d106.70452826745912!3d-6.158331799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f815c3e0ce01%3A0x6411704ba7d9b1d5!2sJl.%20Semanan%20Raya%20No.11%2C%20RT.2%2FRW.7%2C%20Semanan%2C%20Kec.%20Kalideres%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011850!5e0!3m2!1sid!2sid!4v1767317818349!5m2!1sid!2sid"
+                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2007 MASTER Z007</p>
+    </footer>
+
+    <script>
+        /* ========== HEADER SCROLL EFFECT ========== */
+        (function() {
+            const header = document.getElementById('header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                lastScroll = currentScroll;
+            });
+        })();
+
+        /* ========== SIDEBAR TOGGLE ========== */
+        (function() {
+            const sidebar = document.getElementById("sidebar");
+            const menuBtn = document.querySelector(".menu-btn");
+
+            function toggleSidebar() {
+                const isOpen = sidebar.classList.toggle("open");
+                sidebar.setAttribute("aria-hidden", !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            }
+            window.toggleSidebar = toggleSidebar;
+
+            document.addEventListener("click", (e) => {
+                if (sidebar.classList.contains("open") &&
+                    !sidebar.contains(e.target) &&
+                    !menuBtn.contains(e.target)) {
+                    sidebar.classList.remove("open");
+                    sidebar.setAttribute("aria-hidden", "true");
+                    document.body.style.overflow = '';
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && sidebar.classList.contains("open")) {
+                    sidebar.classList.remove("open");
+                    sidebar.setAttribute("aria-hidden", "true");
+                    document.body.style.overflow = '';
+                }
+            });
+        })();
+
+        /* ========== THEME TOGGLE ========== */
+        const themeBtn = document.getElementById("theme-toggle");
+        const THEME_KEY = "theme";
+
+        function applyTheme(mode) {
+            if (mode === "light") {
+                document.body.classList.add("light-mode");
+                themeBtn.textContent = "☀";
+            } else {
+                document.body.classList.remove("light-mode");
+                themeBtn.textContent = "☾";
+            }
+        }
+
+        const savedMode = localStorage.getItem(THEME_KEY);
+        applyTheme(savedMode);
+
+        themeBtn.addEventListener("click", () => {
+            themeBtn.classList.add("active");
+            setTimeout(() => themeBtn.classList.remove("active"), 420);
+
+            const currentIsLight = document.body.classList.contains("light-mode");
+            const newMode = currentIsLight ? "dark" : "light";
+            localStorage.setItem(THEME_KEY, newMode);
+            applyTheme(newMode);
+        });
+
+        /* ========== ACCOUNT MENU ========== */
+        const AUTH_KEY = 'userAuth';
+        const SESSION_KEY = 'sessionAuth';
+
+        // Get login data from memory (from login page) or storage
+        function getLoginData() {
+            // Priority 1: Check if coming from login page (window.loginState)
+            if (window.loginState) {
+                return window.loginState;
+            }
+
+            // Priority 2: Check sessionStorage (for session-only login)
+            const sessionData = sessionStorage.getItem(SESSION_KEY);
+            if (sessionData) {
+                try {
+                    return JSON.parse(sessionData);
+                } catch (e) {
+                    console.error('Error parsing session data:', e);
+                }
+            }
+
+            // Priority 3: Check localStorage (for persistent login with "Remember Me")
+            const persistentData = localStorage.getItem(AUTH_KEY);
+            if (persistentData) {
+                try {
+                    return JSON.parse(persistentData);
+                } catch (e) {
+                    console.error('Error parsing persistent data:', e);
+                }
+            }
+
+            return null;
+        }
+
+        // Save login data
+        function saveLoginData(data, rememberMe = false) {
+            // Always save to sessionStorage for current session
+            sessionStorage.setItem(SESSION_KEY, JSON.stringify(data));
+
+            // If "Remember Me" is checked, also save to localStorage
+            if (rememberMe && data.isLoggedIn) {
+                localStorage.setItem(AUTH_KEY, JSON.stringify(data));
+            } else {
+                // If not remembering, clear localStorage
+                localStorage.removeItem(AUTH_KEY);
+            }
+        }
+
+        // Clear login data
+        function clearLoginData() {
+            sessionStorage.removeItem(SESSION_KEY);
+            localStorage.removeItem(AUTH_KEY);
+            window.loginState = null;
+        }
+
+        // Auto-logout when browser/tab closes (if not "Remember Me")
+        window.addEventListener('beforeunload', function() {
+            const loginData = getLoginData();
+
+            // If there's no persistent data in localStorage, 
+            // it means user didn't check "Remember Me"
+            const hasPersistentLogin = localStorage.getItem(AUTH_KEY);
+
+            if (!hasPersistentLogin && loginData && loginData.isLoggedIn) {
+                // Clear session data on close
+                sessionStorage.removeItem(SESSION_KEY);
+            }
+        });
+
+        (function() {
+            let loginData = getLoginData();
+            let isLoggedIn = loginData ? loginData.isLoggedIn : false;
+            let username = loginData ? loginData.username : "Guest";
+            let avatarURL = loginData ? loginData.avatarURL : "profile.jpg";
+            let rememberMe = loginData ? loginData.rememberMe : false;
+
+            const signinArea = document.getElementById("signin-area");
+            const loginStatus = document.getElementById("login-status");
+
+            // Update sidebar status
+            function updateLoginStatus() {
+                if (loginStatus) {
+                    if (isLoggedIn) {
+                        loginStatus.innerHTML = '<b style="color: #00ff00;">Online (Logged In)</b>';
+                    } else {
+                        loginStatus.innerHTML = '<b style="color: #ff9800;">Guest Mode</b>';
+                    }
+                }
+            }
+
+            function renderSignInMenu() {
+                if (!isLoggedIn) {
+                    // Show Sign In button for guests
+                    signinArea.innerHTML = `
+                            <div class="li-nav">
+                                <a href="Index.html">🔐 Sign In</a>
+                            </div>
+                        `;
+                } else {
+                    // Show account box for logged-in users
+                    signinArea.innerHTML = `
+                            <div class="account-box" id="account-box">
+                                <img src="./assets/img/PROFILE.jpg" alt="User Avatar" 
+                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%27100%27%3E%3Crect fill=%27%233b82f6%27 width=%27100%27 height=%27100%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-size=%2740%27 fill=%27white%27%3E${username.charAt(0)}%3C/text%3E%3C/svg%3E'">
+                                <span>MASTER Z007</span>
+                                <div class="dropdown-menu" id="dropdown-menu">
+                                    <a href="Profile.html">👤 My Profile</a>
+                                    <a href="#" id="logout-btn">🚪 Logout</a>
+                                </div>
+                            </div>
+                        `;
+
+                    const accountBox = document.getElementById("account-box");
+
+                    // Toggle dropdown
+                    accountBox.addEventListener("click", function(e) {
+                        e.stopPropagation();
+                        accountBox.classList.toggle("dropdown-open");
+                    });
+
+                    // Close dropdown when clicking outside
+                    document.addEventListener("click", function(e) {
+                        if (!accountBox.contains(e.target)) {
+                            accountBox.classList.remove("dropdown-open");
+                        }
+                    });
+
+                    // Logout functionality
+                    document.getElementById("logout-btn").addEventListener("click", function(e) {
+                        e.preventDefault();
+
+                        // Clear all login data
+                        clearLoginData();
+
+                        // Update UI state
+                        isLoggedIn = false;
+                        username = "Guest";
+
+                        // Animate logout
+                        accountBox.style.transform = 'scale(0.8)';
+                        accountBox.style.opacity = '0';
+
+                        setTimeout(() => {
+                            renderSignInMenu();
+                            updateLoginStatus();
+
+                            // Show logout notification
+                            showNotification('✅ Logout berhasil! Anda sekarang dalam Guest Mode.');
+                        }, 300);
+                    });
+                }
+
+                updateLoginStatus();
+            }
+
+            // Notification function
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: rgba(59, 130, 246, 0.95);
+                        color: white;
+                        padding: 15px 25px;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 20px rgba(59, 130, 246, 0.5);
+                        z-index: 10000;
+                        animation: slideIn 0.3s ease;
+                        font-weight: bold;
+                    `;
+                notification.textContent = message;
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => notification.remove(), 300);
+                }, 3000);
+            }
+
+            // Save current state if coming from login page
+            if (window.loginState) {
+                // Check if user wants to be remembered (you can add this to login page)
+                const rememberMe = window.loginState.rememberMe || false;
+                saveLoginData(window.loginState, rememberMe);
+            }
+
+            // Initial render
+            renderSignInMenu();
+
+            // Show welcome message for logged-in users
+            if (isLoggedIn && window.loginState) {
+                setTimeout(() => {
+                    showNotification(`🎉 Selamat datang, ${username}!`);
+                }, 500);
+            }
+        })();
+
+        /* ========== CONTACT FORM HANDLER ========== */
+        (function() {
+            const form = document.getElementById('contactForm');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const subject = document.getElementById('subject').value.trim();
+                    const message = document.getElementById('message').value.trim();
+
+                    if (!name || !email || !subject || !message) {
+                        alert('❌ Mohon lengkapi semua field yang wajib diisi!');
+                        return;
+                    }
+
+                    // Show success animation
+                    const btn = form.querySelector('.btn');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<span>✓ Terkirim!</span>';
+                    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+
+                    setTimeout(() => {
+                        alert(`✅ Terima kasih ${name}!\n\nPesan Anda dengan subjek "${subject}" telah berhasil dikirim.\n\nSaya akan segera merespons ke ${email}.`);
+                        form.reset();
+
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.style.background = '';
+                        }, 1000);
+                    }, 500);
+                });
+
+                // Input animations
+                const inputs = form.querySelectorAll('.form-control');
+                inputs.forEach(input => {
+                    input.addEventListener('focus', function() {
+                        this.parentElement.style.transform = 'scale(1.01)';
+                    });
+
+                    input.addEventListener('blur', function() {
+                        this.parentElement.style.transform = 'scale(1)';
+                    });
+                });
+            }
+        })();
+
+        /* ========== INTERSECTION OBSERVER ========== */
+        (function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.card, .map-section').forEach(el => {
+                el.style.opacity = '0';
+                observer.observe(el);
+            });
+        })();
+
+        /* ========== SMOOTH SCROLL ========== */
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href !== '#!') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        })();
+
+        /* ========== PAGE LOAD ANIMATION ========== */
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+
+</html>

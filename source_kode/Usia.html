@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Latihan - Data Mahasiswa & Usia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 350px;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 5px solid #d4c4e0;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #6a0dad;
+            margin-bottom: 25px;
+        }
+        
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #f9f4fe;
+        }
+        
+        button {
+            width: 30%;
+            padding: 10px;
+            background-color: #8a2be2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #6a0dad;
+        }
+        
+        #hasil {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        #hasil span {
+            font-weight: bold;
+            color: #8a2be2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Data Mahasiswa & Usia</h2>
+
+        <input type="text" id="namaInput" placeholder="Nama">
+        <input type="text" id="nimInput" placeholder="NIM">
+        <input type="text" id="tahunLahirInput" placeholder="Tahun Lahir">
+
+        <center>
+            <button onclick="tampilkanData()">Tampilkan</button>
+        </center>
+
+        <div id="hasil">
+        </div>
+    </div>
+
+    <script>
+        function tampilkanData() {
+            const nama = document.getElementById('namaInput').value.trim();
+            const nim = document.getElementById('nimInput').value.trim();
+            const tahunLahirStr = document.getElementById('tahunLahirInput').value.trim();
+            const hasilDiv = document.getElementById('hasil');
+
+            if (nama === '' || nim === '' || tahunLahirStr === '') {
+                hasilDiv.innerHTML = '<p style="color: red;">Mohon lengkapi semua data.</p>';
+                return;
+            }
+            const tahunLahir = parseInt(tahunLahirStr);
+
+            if (isNaN(tahunLahir) || tahunLahirStr.length !== 4) {
+                hasilDiv.innerHTML = '<p style="color: red;">Tahun lahir tidak valid (harus 4 digit angka).</p>';
+                return;
+            }
+            const tahunSekarang = new Date().getFullYear();
+            const usia = tahunSekarang - tahunLahir;
+            const output = `
+            <p>Nama : <span>${nama}</span></p>
+            <p>NIM : <span>${nim}</span></p>
+            <p>Usia : <span>${usia} tahun</span></p>
+        `;
+            hasilDiv.innerHTML = output;
+        }
+    </script>
+
+</body>
+
+</html>
